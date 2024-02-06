@@ -12,8 +12,8 @@ public:
 };
 int main() {
     ioc_container ic;
-    ic.register_type<X>("xx");
-    auto aa = ic.resolve<X>("xx");  // return a object pointer
+    ic.register_key<X>("xx");
+    auto aa = ic.resolve_key<X>("xx");  // return a object pointer
     aa->fun();
     delete aa;
 
